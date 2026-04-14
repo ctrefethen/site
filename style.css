@@ -92,13 +92,28 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 6rem 2rem 4rem;
   position: relative;
 }
 
+.hero-inner {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5rem;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .hero-eyebrow {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: var(--teal-light);
   letter-spacing: 0.12em;
@@ -108,16 +123,15 @@ a { color: inherit; text-decoration: none; }
 
 .hero-name {
   font-family: 'DM Serif Display', serif;
-  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
   color: var(--white);
   line-height: 1.1;
   margin-bottom: 1.25rem;
 }
 
 .hero-tagline {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  color: rgba(255,255,255,0.7);
-  max-width: 560px;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.65);
   margin-bottom: 2.5rem;
 }
 
@@ -125,7 +139,18 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+.hero-photo-col {
+  flex-shrink: 0;
+}
+
+.hero-photo {
+  width: 320px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
 }
 
 .hero-scroll-hint {
@@ -214,23 +239,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .about-grid {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 5rem;
-  align-items: start;
-}
-
-.about-photo-col {
-  width: 240px;
-  overflow: hidden;
-}
-
-.about-photo {
-  width: 240px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
+  max-width: 720px;
 }
 
 .about-body {
@@ -387,13 +396,22 @@ footer {
    RESPONSIVE
    ============================================= */
 @media (max-width: 700px) {
-  .about-grid {
+  .hero-inner {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    text-align: center;
   }
-  .about-photo-placeholder {
-    aspect-ratio: 1;
-    max-width: 200px;
+  .hero-content {
+    align-items: center;
+    order: 2;
+  }
+  .hero-photo-col {
+    order: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-photo {
+    width: 200px;
+    height: 250px;
   }
   .resume-item {
     grid-template-columns: 1fr;
