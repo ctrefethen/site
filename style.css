@@ -87,28 +87,32 @@ a { color: inherit; text-decoration: none; }
    ============================================= */
 #hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--slate) 100%);
+  background-image: url('images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  /* Fallback if no image uploaded yet */
+  background-color: var(--navy);
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 6rem 2rem 4rem;
   position: relative;
 }
 
-.hero-inner {
-  max-width: 1040px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5rem;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 28, 48, 0.65);
 }
 
 .hero-content {
-  flex: 1;
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  max-width: 700px;
 }
 
 .hero-eyebrow {
@@ -122,7 +126,7 @@ a { color: inherit; text-decoration: none; }
 
 .hero-name {
   font-family: 'DM Serif Display', serif;
-  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-size: clamp(3rem, 8vw, 5.5rem);
   color: var(--white);
   line-height: 1.1;
   margin-bottom: 1.25rem;
@@ -130,7 +134,7 @@ a { color: inherit; text-decoration: none; }
 
 .hero-tagline {
   font-size: 1.1rem;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.75);
   margin-bottom: 2.5rem;
 }
 
@@ -138,21 +142,7 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-}
-
-.hero-photo-col {
-  flex-shrink: 0;
-  width: 300px;
-  height: 380px;
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-.hero-photo {
-  width: 300px;
-  height: 380px;
-  object-fit: cover;
-  display: block;
+  justify-content: center;
 }
 
 .hero-scroll-hint {
@@ -160,6 +150,7 @@ a { color: inherit; text-decoration: none; }
   bottom: 2rem;
   color: rgba(255,255,255,0.35);
   font-size: 1.5rem;
+  z-index: 1;
   animation: bounce 2s infinite;
 }
 
@@ -241,7 +232,23 @@ a { color: inherit; text-decoration: none; }
 }
 
 .about-grid {
-  max-width: 720px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.about-photo-col {
+  width: 240px;
+  overflow: hidden;
+}
+
+.about-photo {
+  width: 240px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
 }
 
 .about-body {
@@ -265,6 +272,48 @@ a { color: inherit; text-decoration: none; }
 }
 
 .text-link:hover { border-color: var(--teal); }
+
+/* =============================================
+   INTERESTS
+   ============================================= */
+#interests {
+  padding: 7rem 0;
+  background: var(--navy);
+}
+
+#interests .section-label { color: var(--teal-light); }
+#interests .section-heading { color: var(--white); margin-bottom: 3rem; }
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.interest-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.interest-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.interest-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.interest-desc {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
 
 /* =============================================
    RESUME
@@ -398,22 +447,19 @@ footer {
    RESPONSIVE
    ============================================= */
 @media (max-width: 700px) {
-  .hero-inner {
-    flex-direction: column;
-    text-align: center;
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  .hero-content {
-    align-items: center;
-    order: 2;
+  .about-photo-col {
+    width: 100%;
   }
-  .hero-photo-col {
-    order: 1;
-    width: 200px;
-    height: 250px;
+  .about-photo {
+    width: 100%;
+    height: 260px;
   }
-  .hero-photo {
-    width: 200px;
-    height: 250px;
+  .interests-grid {
+    grid-template-columns: 1fr;
   }
   .resume-item {
     grid-template-columns: 1fr;

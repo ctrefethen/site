@@ -16,6 +16,7 @@
       <a class="nav-logo" href="#hero">CT</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#interests">Interests</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -23,19 +24,16 @@
   </nav>
 
   <!-- HERO -->
+  <!-- Replace images/hero-bg.jpg with a photo from your shop or a project -->
   <section id="hero">
-    <div class="hero-inner">
-      <div class="hero-content">
-        <p class="hero-eyebrow">Hi, I'm</p>
-        <h1 class="hero-name">Colby Trefethen</h1>
-        <p class="hero-tagline">Mechanical Engineering Student · Machinist · Builder</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#about">About me</a>
-          <a class="btn btn-ghost" href="#contact">Get in touch</a>
-        </div>
-      </div>
-      <div class="hero-photo-col">
-        <img src="images/colby.jpg" alt="Colby Trefethen" class="hero-photo" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Hi, I'm</p>
+      <h1 class="hero-name">Colby Trefethen</h1>
+      <p class="hero-tagline">Mechanical Engineering Student · Machinist · Builder</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#about">About me</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
       </div>
     </div>
     <div class="hero-scroll-hint">↓</div>
@@ -45,6 +43,10 @@
   <section id="about">
     <div class="container">
       <div class="about-grid">
+
+        <div class="about-photo-col">
+          <img src="images/colby.jpg" alt="Colby Trefethen" class="about-photo" />
+        </div>
 
         <div class="about-text-col">
           <p class="section-label">About me</p>
@@ -62,6 +64,35 @@
             <a href="https://www.linkedin.com/in/colbytrefethen/" class="text-link" target="_blank" rel="noopener">LinkedIn</a>
             <a href="mailto:colby@trefethen.us" class="text-link">Email</a>
           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERESTS -->
+  <section id="interests">
+    <div class="container">
+      <p class="section-label">Outside the shop</p>
+      <h2 class="section-heading">Interests</h2>
+      <div class="interests-grid">
+
+        <div class="interest-card">
+          <div class="interest-icon">⌚</div>
+          <h3 class="interest-title">Watchmaking</h3>
+          <p class="interest-desc">Currently designing and constructing a watch body, dial, crown, and band from scratch. Requires tolerances under a thousandth of an inch.</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon">⚙️</div>
+          <h3 class="interest-title">Desktop CNC</h3>
+          <p class="interest-desc">Designing a compact CNC machine for home use, with the goal of milling circuit boards for various projects.</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon">⛳</div>
+          <h3 class="interest-title">Golfing</h3>
+          <p class="interest-desc">Designed and milled a fully custom putter head from brass, simulating weight distribution for a custom feel.</p>
         </div>
 
       </div>
