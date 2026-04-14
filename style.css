@@ -26,6 +26,7 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
 
 .container {
   max-width: 1040px;
@@ -240,15 +241,17 @@ a { color: inherit; text-decoration: none; }
 
 .about-photo-col {
   width: 240px;
+  max-width: 240px;
+  flex-shrink: 0;
   overflow: hidden;
+  border-radius: 12px;
 }
 
 .about-photo {
-  width: 240px;
+  width: 100%;
   height: 300px;
   object-fit: cover;
   border-radius: 12px;
-  display: block;
 }
 
 .about-body {
