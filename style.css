@@ -4,15 +4,15 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --navy:   #1a2238;
-  --slate:  #2d3a55;
-  --teal:   #00b4d8;
-  --teal-light: #90e0ef;
-  --white:  #ffffff;
+  --navy:      #1a2238;
+  --slate:     #2d3a55;
+  --teal:      #00b4d8;
+  --teal-light:#90e0ef;
+  --white:     #ffffff;
   --off-white: #f8f9fc;
-  --text:   #1a2238;
-  --muted:  #6b7a99;
-  --border: #e2e8f0;
+  --text:      #1a2238;
+  --muted:     #6b7a99;
+  --border:    #e2e8f0;
 }
 
 html { scroll-behavior: smooth; }
@@ -81,90 +81,11 @@ img { max-width: 100%; display: block; }
   transition: color 0.2s;
 }
 
-.nav-links a:hover { color: var(--white); }
-
-/* =============================================
-   HERO
-   ============================================= */
-#hero {
-  min-height: 100vh;
-  background-image: url('images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-color: var(--navy);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 6rem 2rem 4rem;
-  position: relative;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(20, 28, 48, 0.65);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 700px;
-}
-
-.hero-eyebrow {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: var(--teal-light);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
-}
-
-.hero-name {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(3rem, 8vw, 5.5rem);
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--white);
-  line-height: 1.1;
-  margin-bottom: 1.25rem;
-}
-
-.hero-tagline {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.75);
-  margin-bottom: 0.75rem;
-}
-
-.hero-research-tag {
-  font-size: 0.9rem;
-  color: var(--teal-light);
-  letter-spacing: 0.06em;
-  margin-bottom: 2rem;
-  opacity: 0.85;
-}
-
-.hero-cta {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.hero-scroll-hint {
-  position: absolute;
-  bottom: 2rem;
-  color: rgba(255,255,255,0.35);
-  font-size: 1.5rem;
-  z-index: 1;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
+  border-bottom: 1.5px solid var(--teal);
+  padding-bottom: 2px;
 }
 
 /* =============================================
@@ -177,17 +98,18 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.03em;
-  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+  transition: transform 0.15s, box-shadow 0.15s;
   cursor: pointer;
 }
 
 .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
 
-.btn-primary { background: var(--teal); color: var(--navy); }
-.btn-ghost { border: 1.5px solid rgba(255,255,255,0.4); color: var(--white); }
-.btn-ghost:hover { border-color: var(--white); }
-.btn-white { background: var(--white); color: var(--navy); font-weight: 600; }
-.btn-outline { border: 1.5px solid var(--teal); color: var(--teal); background: transparent; }
+.btn-primary       { background: var(--teal); color: var(--navy); }
+.btn-ghost         { border: 1.5px solid rgba(255,255,255,0.4); color: var(--white); }
+.btn-ghost:hover   { border-color: var(--white); }
+.btn-ghost-dark    { display: inline-block; padding: 0.75rem 2rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; border: 1.5px solid rgba(255,255,255,0.4); color: var(--white); transition: border-color 0.2s, transform 0.15s; }
+.btn-ghost-dark:hover { border-color: var(--white); transform: translateY(-2px); }
+.btn-white         { background: var(--white); color: var(--navy); font-weight: 600; }
 
 /* =============================================
    SECTION LABELS & HEADINGS
@@ -214,26 +136,142 @@ img { max-width: 100%; display: block; }
 .section-heading.light { color: var(--white); }
 
 /* =============================================
-   RESEARCH SECTION
+   HOMEPAGE: BANNER
    ============================================= */
-#research {
-  padding: 7rem 0;
-  background: var(--off-white);
+#banner {
+  background: var(--navy);
+  padding: 8rem 2rem 5rem;
+  text-align: center;
+}
+
+#banner .section-label { color: var(--teal-light); }
+
+.banner-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  color: var(--white);
+  line-height: 1.15;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.banner-sub {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+  font-style: italic;
+}
+
+.hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* =============================================
+   HOMEPAGE: INTRO (text + image)
+   ============================================= */
+#about-site {
+  padding: 6rem 0;
+  background: var(--white);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 5rem;
+  align-items: center;
 }
 
 .research-intro {
   color: #3d4a6b;
   font-size: 1.05rem;
   line-height: 1.8;
-  max-width: 780px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.intro-img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  display: block;
+}
+
+.intro-image { position: relative; }
+
+.intro-image.img-fallback {
+  background: var(--off-white);
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--muted);
+  font-size: 0.85rem;
+  gap: 0.5rem;
+}
+
+.intro-image.img-fallback::before { content: '📷'; font-size: 2rem; opacity: 0.4; }
+.intro-image.img-fallback::after  { content: 'Add an iCLIP image here'; }
+.intro-image.img-fallback .intro-img { display: none; }
+.intro-image.img-fallback .intro-img-caption { display: none; }
+
+.intro-img-caption {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 0.6rem;
+  font-style: italic;
+  text-align: center;
+}
+
+/* =============================================
+   HOMEPAGE: STATS BAR
+   ============================================= */
+#results {
+  padding: 5rem 0;
+  background: var(--navy);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.result-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-top: 3px solid var(--teal);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.result-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  color: var(--teal-light);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.result-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+}
+
+/* =============================================
+   HOMEPAGE: RESEARCH CARDS
+   ============================================= */
+#background {
+  padding: 6rem 0;
+  background: var(--off-white);
 }
 
 .research-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin-top: 3.5rem;
+  margin-top: 2rem;
 }
 
 .research-card {
@@ -247,29 +285,38 @@ img { max-width: 100%; display: block; }
 .research-card-num {
   font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   color: var(--teal);
   margin-bottom: 0.75rem;
-}
-
-.research-card h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--navy);
-  margin-bottom: 0.75rem;
+  text-transform: uppercase;
 }
 
 .research-card p {
   font-size: 0.95rem;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
+.page-nav-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.page-nav-btn {
+  display: inline-block;
+  border: 1.5px solid var(--teal);
+  color: var(--teal);
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.page-nav-btn:hover { background: var(--teal); color: var(--navy); }
+
 /* =============================================
-   ABOUT
+   ABOUT PAGE
    ============================================= */
 #about {
-  padding: 7rem 0;
+  padding: 5rem 0;
   background: var(--white);
 }
 
@@ -280,13 +327,7 @@ img { max-width: 100%; display: block; }
   align-items: start;
 }
 
-.about-photo-col {
-  width: 240px;
-  max-width: 240px;
-  flex-shrink: 0;
-  overflow: hidden;
-  border-radius: 12px;
-}
+.about-photo-col { width: 240px; border-radius: 12px; overflow: hidden; }
 
 .about-photo {
   width: 100%;
@@ -295,11 +336,7 @@ img { max-width: 100%; display: block; }
   border-radius: 12px;
 }
 
-.about-body {
-  color: #3d4a6b;
-  margin-bottom: 1.25rem;
-  font-size: 1.05rem;
-}
+.about-body { color: #3d4a6b; margin-bottom: 1.25rem; font-size: 1.05rem; }
 
 .about-placeholder {
   color: #8a9ab8 !important;
@@ -308,11 +345,7 @@ img { max-width: 100%; display: block; }
   font-style: italic;
 }
 
-.about-links {
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
+.about-links { display: flex; gap: 1.5rem; margin-top: 2rem; }
 
 .text-link {
   font-size: 0.9rem;
@@ -328,18 +361,14 @@ img { max-width: 100%; display: block; }
    INTERESTS
    ============================================= */
 #interests {
-  padding: 7rem 0;
+  padding: 6rem 0;
   background: var(--navy);
 }
 
 #interests .section-label { color: var(--teal-light); }
 #interests .section-heading { color: var(--white); margin-bottom: 3rem; }
 
-.interests-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
+.interests-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 
 .interest-card {
   background: rgba(255,255,255,0.05);
@@ -349,90 +378,15 @@ img { max-width: 100%; display: block; }
 }
 
 .interest-icon { font-size: 2rem; margin-bottom: 1rem; }
-
-.interest-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--white);
-  margin-bottom: 0.75rem;
-}
-
-.interest-desc {
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.6);
-  line-height: 1.6;
-}
-
-/* =============================================
-   SYNTHESIS & POPULAR SCIENCE
-   ============================================= */
-#synthesis {
-  padding: 7rem 0;
-  background: var(--off-white);
-}
-
-#popular-science {
-  padding: 7rem 0;
-  background: var(--white);
-}
-
-.writing-subtitle {
-  font-family: 'DM Serif Display', serif;
-  font-size: 1.4rem;
-  color: var(--slate);
-  margin-top: -0.75rem;
-  margin-bottom: 3rem;
-  font-style: italic;
-}
-
-.writing-placeholder {
-  border: 2px dashed var(--border);
-  border-radius: 10px;
-  padding: 4rem 3rem;
-  text-align: center;
-  background: var(--white);
-}
-
-#synthesis .writing-placeholder {
-  background: var(--off-white);
-}
-
-.writing-placeholder-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  opacity: 0.5;
-}
-
-.writing-placeholder-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--slate);
-  margin-bottom: 0.75rem;
-}
-
-.writing-placeholder-body {
-  font-size: 0.95rem;
-  color: var(--muted);
-  max-width: 520px;
-  margin: 0 auto;
-  line-height: 1.7;
-}
+.interest-title { font-size: 1.1rem; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; }
+.interest-desc { font-size: 0.95rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
 
 /* =============================================
    RESUME
    ============================================= */
 #resume {
-  padding: 7rem 0;
-  background: var(--white);
-}
-
-.resume-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 3.5rem;
-  flex-wrap: wrap;
-  gap: 1rem;
+  padding: 5rem 0 6rem;
+  background: var(--off-white);
 }
 
 .resume-section { margin-bottom: 3rem; }
@@ -456,7 +410,7 @@ img { max-width: 100%; display: block; }
 }
 
 .resume-item-title { font-size: 1rem; font-weight: 600; color: var(--navy); }
-.resume-item-org { font-size: 0.95rem; color: var(--teal); font-weight: 500; }
+.resume-item-org   { font-size: 0.95rem; color: var(--teal); font-weight: 500; }
 
 .resume-item-date {
   font-size: 0.85rem;
@@ -468,23 +422,89 @@ img { max-width: 100%; display: block; }
   white-space: nowrap;
 }
 
-.resume-item-desc {
-  font-size: 0.95rem;
-  color: #3d4a6b;
-  margin-top: 0.4rem;
-  grid-column: 1;
-}
+.resume-item-desc { font-size: 0.95rem; color: #3d4a6b; margin-top: 0.4rem; grid-column: 1; }
 
 .skills-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
 .skill-tag {
-  background: var(--off-white);
+  background: var(--white);
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 0.3rem 0.8rem;
   font-size: 0.85rem;
   color: var(--slate);
   font-weight: 500;
+}
+
+/* =============================================
+   INNER PAGE HERO HEADERS
+   ============================================= */
+.page-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--slate) 100%);
+  padding: 8rem 2rem 5rem;
+  text-align: center;
+}
+
+.page-hero .section-label { color: var(--teal-light); }
+
+.page-hero-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--white);
+  line-height: 1.15;
+  margin: 0.5rem 0 1rem;
+}
+
+.page-hero-sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.65);
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* =============================================
+   SYNTHESIS & POPULAR SCIENCE
+   ============================================= */
+#synthesis      { padding: 5rem 0 6rem; background: var(--white); }
+#popular-science { padding: 5rem 0 6rem; background: var(--off-white); }
+
+.writing-container { max-width: 760px; }
+
+.writing-subtitle {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.4rem;
+  color: var(--slate);
+  margin-top: -0.75rem;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.writing-placeholder {
+  border: 2px dashed var(--border);
+  border-radius: 10px;
+  padding: 4rem 3rem;
+  text-align: center;
+  background: var(--off-white);
+}
+
+#popular-science .writing-placeholder { background: var(--white); }
+
+.writing-placeholder-icon  { font-size: 2.5rem; margin-bottom: 1rem; opacity: 0.5; }
+.writing-placeholder-title { font-size: 1.1rem; font-weight: 600; color: var(--slate); margin-bottom: 0.75rem; }
+.writing-placeholder-body  { font-size: 0.95rem; color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.7; }
+
+/* =============================================
+   PAGE FOOTER NAV
+   ============================================= */
+.page-footer-nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 /* =============================================
@@ -506,10 +526,7 @@ img { max-width: 100%; display: block; }
 /* =============================================
    FOOTER
    ============================================= */
-footer {
-  background: #111827;
-  padding: 1.5rem 2rem;
-}
+footer { background: #111827; padding: 1.5rem 2rem; }
 
 .footer-inner {
   display: flex;
@@ -520,345 +537,20 @@ footer {
 }
 
 .footer-links { display: flex; gap: 1.5rem; }
-
-.footer-links a {
-  color: rgba(255,255,255,0.4);
-  transition: color 0.2s;
-}
-
+.footer-links a { color: rgba(255,255,255,0.4); transition: color 0.2s; }
 .footer-links a:hover { color: rgba(255,255,255,0.8); }
 
 /* =============================================
    RESPONSIVE
    ============================================= */
-@media (max-width: 700px) {
-  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .about-photo-col { width: 100%; }
-  .about-photo { width: 100%; height: 260px; }
-  .interests-grid { grid-template-columns: 1fr; }
-  .research-cards { grid-template-columns: 1fr; }
-  .resume-item { grid-template-columns: 1fr; }
-  .resume-item-date { grid-row: auto; grid-column: 1; text-align: left; }
-  .resume-header { flex-direction: column; align-items: flex-start; }
-  .writing-placeholder { padding: 2.5rem 1.5rem; }
-}
-
-/* =============================================
-   MULTI-PAGE: PAGE HERO HEADERS
-   ============================================= */
-.page-hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--slate) 100%);
-  padding: 8rem 2rem 5rem;
-  text-align: center;
-}
-
-.page-hero-title {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  color: var(--white);
-  line-height: 1.15;
-  margin: 0.5rem 0 1rem;
-}
-
-.page-hero-sub {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.65);
-  font-style: italic;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* =============================================
-   MULTI-PAGE: WRITING CONTAINER
-   ============================================= */
-.writing-container {
-  max-width: 760px;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-/* =============================================
-   MULTI-PAGE: PAGE NAV LINKS
-   ============================================= */
-.page-nav-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 4rem;
-}
-
-.page-footer-nav {
-  display: flex;
-  justify-content: space-between;
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 2rem 2rem 4rem;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.page-nav-btn {
-  display: inline-block;
-  border: 1.5px solid var(--teal);
-  color: var(--teal);
-  padding: 0.6rem 1.4rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s;
-}
-
-.page-nav-btn:hover {
-  background: var(--teal);
-  color: var(--navy);
-}
-
-/* =============================================
-   NAV: ACTIVE STATE
-   ============================================= */
-.nav-links a.active {
-  color: var(--white);
-  border-bottom: 1.5px solid var(--teal);
-  padding-bottom: 2px;
-}
-
-/* =============================================
-   ABOUT PAGE: RESUME SECTION SPACING
-   ============================================= */
-#resume {
-  padding: 5rem 0 7rem;
-  background: var(--off-white);
-}
-
-/* =============================================
-   HOMEPAGE: RESULTS GRID
-   ============================================= */
-#about-site {
-  padding: 7rem 0 4rem;
-  background: var(--white);
-}
-
-#background {
-  padding: 4rem 0 7rem;
-  background: var(--off-white);
-}
-
-#results {
-  padding: 7rem 0;
-  background: var(--navy);
-}
-
-#results .section-label { color: var(--teal-light); }
-#results .section-heading { color: var(--white); margin-bottom: 3rem; }
-
-.results-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-
-.result-item {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-top: 3px solid var(--teal);
-  border-radius: 8px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-}
-
-.result-num {
-  font-family: 'DM Serif Display', serif;
-  font-size: 2.2rem;
-  color: var(--teal-light);
-  margin-bottom: 0.75rem;
-  line-height: 1;
-}
-
-.result-label {
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.6);
-  line-height: 1.5;
-}
-
-#results .page-nav-btn {
-  border-color: rgba(255,255,255,0.3);
-  color: rgba(255,255,255,0.8);
-}
-
-#results .page-nav-btn:hover {
-  background: rgba(255,255,255,0.1);
-  color: var(--white);
-  border-color: var(--white);
-}
-
-@media (max-width: 700px) {
-  .results-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* =============================================
-   HERO STAT HIGHLIGHT
-   ============================================= */
-.hero-stat {
-  color: var(--teal-light);
-  font-style: italic;
-}
-
-/* =============================================
-   RESEARCH CARDS: remove h3 gap when no h3
-   ============================================= */
-.research-card p {
-  font-size: 0.95rem;
-  color: var(--muted);
-  line-height: 1.7;
-  margin-top: 0.75rem;
-}
-
-/* =============================================
-   HERO: RICHER BACKGROUND (no image fallback)
-   ============================================= */
-#hero {
-  background-image:
-    radial-gradient(ellipse 90% 70% at 55% 40%, rgba(0, 180, 216, 0.13) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 50% at 15% 85%, rgba(0, 80, 140, 0.18) 0%, transparent 55%),
-    linear-gradient(155deg, #070f1f 0%, #111d35 40%, #0c2240 100%);
-  background-color: #070f1f;
-}
-
-#hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    -55deg,
-    transparent,
-    transparent 60px,
-    rgba(0, 180, 216, 0.025) 60px,
-    rgba(0, 180, 216, 0.025) 61px
-  );
-  pointer-events: none;
-}
-
-.hero-overlay {
-  background: rgba(7, 15, 31, 0.45);
-}
-
-.hero-name {
-  font-size: clamp(2.8rem, 7vw, 5rem);
-  letter-spacing: -0.01em;
-}
-
-.hero-stat {
-  font-size: clamp(3.5rem, 9vw, 6.5rem);
-  display: block;
-  line-height: 1;
-  margin: 0.1em 0;
-}
-
-/* =============================================
-   BANNER (replaces full-screen hero)
-   ============================================= */
-#banner {
-  background: var(--navy);
-  padding: 7rem 2rem 5rem;
-  text-align: center;
-}
-
-#banner .section-label { color: var(--teal-light); }
-
-.banner-title {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(2.8rem, 6vw, 4.5rem);
-  color: var(--white);
-  line-height: 1.15;
-  margin: 0.5rem 0 1.25rem;
-}
-
-.banner-sub {
-  font-size: 1.15rem;
-  color: rgba(255,255,255,0.7);
-  max-width: 560px;
-  margin: 0 auto 2.5rem;
-  font-style: italic;
-}
-
-.btn-ghost-dark {
-  border: 1.5px solid rgba(255,255,255,0.4);
-  color: var(--white);
-  padding: 0.75rem 2rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  display: inline-block;
-  transition: border-color 0.2s;
-}
-
-.btn-ghost-dark:hover { border-color: var(--white); }
-
-/* =============================================
-   INTRO: two-column text + image
-   ============================================= */
-#about-site {
-  padding: 6rem 0;
-  background: var(--white);
-}
-
-.intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 5rem;
-  align-items: center;
-}
-
-.intro-img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-  display: block;
-}
-
-.intro-image {
-  position: relative;
-}
-
-.intro-image.img-fallback {
-  background: var(--off-white);
-  border: 2px dashed var(--border);
-  border-radius: 8px;
-  min-height: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: var(--muted);
-  font-size: 0.85rem;
-  font-family: 'Inter', sans-serif;
-  gap: 0.5rem;
-}
-
-.intro-image.img-fallback::before {
-  content: '📷';
-  font-size: 2rem;
-  opacity: 0.4;
-}
-
-.intro-image.img-fallback::after {
-  content: 'Add an iCLIP image here';
-}
-
-.intro-image.img-fallback .intro-img { display: none; }
-.intro-image.img-fallback .intro-img-caption { display: none; }
-
-.intro-img-caption {
-  font-size: 0.78rem;
-  color: var(--muted);
-  margin-top: 0.6rem;
-  font-style: italic;
-  text-align: center;
-}
-
 @media (max-width: 800px) {
-  .intro-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
+  .intro-grid        { grid-template-columns: 1fr; gap: 2.5rem; }
+  .results-grid      { grid-template-columns: repeat(2, 1fr); }
+  .research-cards    { grid-template-columns: 1fr; }
+  .interests-grid    { grid-template-columns: 1fr; }
+  .about-grid        { grid-template-columns: 1fr; gap: 2rem; }
+  .about-photo-col   { width: 100%; }
+  .about-photo       { height: 260px; width: 100%; }
+  .resume-item       { grid-template-columns: 1fr; }
+  .resume-item-date  { grid-row: auto; grid-column: 1; text-align: left; }
 }
