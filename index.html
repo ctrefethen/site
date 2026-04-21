@@ -3,48 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Colby Trefethen</title>
+  <title>Colby Trefethen — iCLIP Research</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav id="nav">
+  <nav id="nav" class="scrolled">
     <div class="nav-inner">
-      <a class="nav-logo" href="#hero">CT</a>
+      <a class="nav-logo" href="index.html">CT</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#synthesis">Synthesis</a></li>
-        <li><a href="#popular-science">Popular Science</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="synthesis.html">Synthesis</a></li>
+        <li><a href="popular-science.html">Popular Science</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- HERO -->
   <section id="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Hi, I'm</p>
-      <h1 class="hero-name">Colby Trefethen</h1>
-      <p class="hero-tagline">Mechanical Engineering Student · Machinist · Builder</p>
-      <p class="hero-research-tag">Researching iCLIP — the future of continuous 3D printing</p>
+      <p class="hero-eyebrow">Research Focus</p>
+      <h1 class="hero-name">iCLIP</h1>
+      <p class="hero-tagline">The Future of Continuous 3D Printing</p>
+      <p class="hero-research-tag">By Colby Trefethen · Mechanical Engineering · CU Boulder</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#research">Explore My Research</a>
-        <a class="btn btn-ghost" href="#about">About me</a>
+        <a class="btn btn-primary" href="synthesis.html">Read the Synthesis</a>
+        <a class="btn btn-ghost" href="popular-science.html">Popular Science Article</a>
       </div>
     </div>
     <div class="hero-scroll-hint">↓</div>
   </section>
 
-  <!-- RESEARCH (Homepage research content) -->
   <section id="research">
     <div class="container">
-      <p class="section-label">Research Focus</p>
+      <p class="section-label">About This Site</p>
       <h2 class="section-heading">What is iCLIP?</h2>
       <p class="research-intro">
         Injection Continuous Liquid Interface Production — iCLIP — is a breakthrough 3D printing process
@@ -80,227 +75,21 @@
           opening doors that layer-based printing simply cannot reach.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <div class="about-grid">
-
-        <div class="about-photo-col">
-          <img src="images/colby.jpg" alt="Colby Trefethen" class="about-photo" />
-        </div>
-
-        <div class="about-text-col">
-          <p class="section-label">About me</p>
-          <h2 class="section-heading">Who I am</h2>
-
-          <p class="about-body">
-            I am a third year Mechanical Engineering Student at the University of Colorado Boulder. I have a particular interest in learning the manufacturing side of engineering, bringing complex designs into the real world. I enjoy taking leadership roles in various projects here at CU, and I use my technical know-how to coordinate the process of design to fabrication.
-          </p>
-
-          <p class="about-body">
-            In 2016, I saw my first 3D printer, and was hooked. I saved up enough so later that year, I bought my very own. From there, I learned how to 3D model basic components to make myself, introducing me into the world of mechanical engineering.
-          </p>
-
-          <p class="about-body">
-            Ultimately, I would like to work in mechatronics, designing systems that integrate both mechanical and electronic hardware. Having my own startup developing products is my end-goal. For now, I would like to build as many interesting parts at the machine shop, to build my knowledge of manufacturing capabilities.
-          </p>
-
-          <!-- PLACEHOLDER: Add a paragraph here about why you chose iCLIP as your research topic -->
-          <p class="about-body about-placeholder">
-            <em>[ Add a paragraph here about why you chose iCLIP as your research topic — your personal connection to 3D printing makes this a natural fit. ]</em>
-          </p>
-
-          <div class="about-links">
-            <a href="https://www.linkedin.com/in/colbytrefethen/" class="text-link" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="mailto:colby@trefethen.us" class="text-link">Email</a>
-          </div>
-        </div>
-
+      <div class="page-nav-links">
+        <a href="about.html" class="page-nav-btn">About the Researcher →</a>
+        <a href="synthesis.html" class="page-nav-btn">Read the Synthesis →</a>
+        <a href="popular-science.html" class="page-nav-btn">Popular Science Article →</a>
       </div>
     </div>
   </section>
 
-  <!-- INTERESTS -->
-  <section id="interests">
-    <div class="container">
-      <p class="section-label">Outside the shop</p>
-      <h2 class="section-heading">Interests</h2>
-      <div class="interests-grid">
-
-        <div class="interest-card">
-          <div class="interest-icon">⌚</div>
-          <h3 class="interest-title">Watchmaking</h3>
-          <p class="interest-desc">Currently designing and constructing a watch body, dial, crown, and band from scratch. Requires tolerances under a thousandth of an inch.</p>
-        </div>
-
-        <div class="interest-card">
-          <div class="interest-icon">⚙️</div>
-          <h3 class="interest-title">Desktop CNC</h3>
-          <p class="interest-desc">Designing a compact CNC machine for home use, with the goal of milling circuit boards for various projects.</p>
-        </div>
-
-        <div class="interest-card">
-          <div class="interest-icon">⛳</div>
-          <h3 class="interest-title">Golfing</h3>
-          <p class="interest-desc">Designed and milled a fully custom putter head from brass, simulating weight distribution for a custom feel.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SYNTHESIS -->
-  <section id="synthesis">
-    <div class="container">
-      <p class="section-label">Academic Writing</p>
-      <h2 class="section-heading">Synthesis Essay</h2>
-      <p class="writing-subtitle">iCLIP and the Evolution of Additive Manufacturing</p>
-
-      <!-- PLACEHOLDER: Paste your revised synthesis essay here, replacing this block -->
-      <div class="writing-placeholder">
-        <div class="writing-placeholder-icon">📄</div>
-        <p class="writing-placeholder-title">Synthesis Essay — Coming Soon</p>
-        <p class="writing-placeholder-body">
-          Your revised synthesis will go here. This essay integrates multiple academic sources
-          to make an original argument about iCLIP technology, its significance, and the current
-          state of research. Paste your revised text in place of this block when ready.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- POPULAR SCIENCE ARTICLE -->
-  <section id="popular-science">
-    <div class="container">
-      <p class="section-label">Science Communication</p>
-      <h2 class="section-heading">Popular Science Article</h2>
-      <p class="writing-subtitle">3D Printing Without Layers: The iCLIP Revolution</p>
-
-      <!-- PLACEHOLDER: Paste your revised popular science article here, replacing this block -->
-      <div class="writing-placeholder">
-        <div class="writing-placeholder-icon">📰</div>
-        <p class="writing-placeholder-title">Popular Science Article — Coming Soon</p>
-        <p class="writing-placeholder-body">
-          Your revised popular science article will go here. Written for a general audience,
-          this piece will make iCLIP technology accessible and engaging to readers without a
-          technical background. Paste your revised text in place of this block when ready.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- RESUME -->
-  <section id="resume">
-    <div class="container">
-      <div class="resume-header">
-        <div>
-          <p class="section-label">Background</p>
-          <h2 class="section-heading">Resume</h2>
-        </div>
-      </div>
-
-      <!-- ENGINEERING EXPERIENCE -->
-      <div class="resume-section">
-        <p class="resume-section-title">Engineering Experience</p>
-
-        <div class="resume-item">
-          <div class="resume-item-title">Machinist</div>
-          <div class="resume-item-date">Aug 2023 – Present</div>
-          <div class="resume-item-org">CU Aerospace Machine Shop, Boulder, CO</div>
-          <div class="resume-item-desc">
-            Collaborated with multiple senior project teams, professors, and research groups to fabricate parts such as rocket nose cones for space to tolerance. Worked with students looking to get trained on large manufacturing machinery.
-          </div>
-        </div>
-
-        <div class="resume-item">
-          <div class="resume-item-title">Machinist</div>
-          <div class="resume-item-date">Jun – Aug 2024</div>
-          <div class="resume-item-org">Tony's Machine Shop, Scotts Valley, CA</div>
-          <div class="resume-item-desc">
-            Worked with a three person team to produce single part iterations for various companies. Assisted companies with designs and guided them through to full-scale fabrication. Regularly spoke with high-level mechanical engineers to iterate designs and drive down cost of manufacturing. Produced thousands of parts in dozens of material types, including plastics, steels, and more exotic metals.
-          </div>
-        </div>
-      </div>
-
-      <!-- LEADERSHIP -->
-      <div class="resume-section">
-        <p class="resume-section-title">Leadership</p>
-
-        <div class="resume-item">
-          <div class="resume-item-title">Manufacturing / Design Lead, Plastic Bottle Recycler</div>
-          <div class="resume-item-date">Aug – Dec 2023</div>
-          <div class="resume-item-org">University of Colorado Boulder</div>
-          <div class="resume-item-desc">
-            Collaborated with a team of 5 to design and manufacture a machine which turned PET bottles into usable 3D printing filament. Ensured team was on schedule with deadlines.
-          </div>
-        </div>
-
-        <div class="resume-item">
-          <div class="resume-item-title">Member</div>
-          <div class="resume-item-date">Aug 2023 – Aug 2024</div>
-          <div class="resume-item-org">Student Robotics Club, CU Boulder</div>
-          <div class="resume-item-desc">
-            Designed barrel switcher for main gimbal of the robot.
-          </div>
-        </div>
-      </div>
-
-      <!-- EDUCATION -->
-      <div class="resume-section">
-        <p class="resume-section-title">Education</p>
-
-        <div class="resume-item">
-          <div class="resume-item-title">B.S. Mechanical Engineering</div>
-          <div class="resume-item-date">Graduating May 2027</div>
-          <div class="resume-item-org">University of Colorado Boulder</div>
-          <div class="resume-item-desc">
-            Relevant coursework: Computer Science, Engineering Projects, CAD, Material Science, Statics and Structures, Thermodynamics, Fluid Mechanics. Certification: CSWA. Award: Innovative Design Award, Freshman Project (May 2024).
-          </div>
-        </div>
-      </div>
-
-      <!-- SKILLS -->
-      <div class="resume-section">
-        <p class="resume-section-title">Skills</p>
-        <div class="skills-grid">
-          <span class="skill-tag">1000+ hours on manual and CNC mills</span>
-          <span class="skill-tag">4-axis lathes</span>
-          <span class="skill-tag">3-axis and 5-axis CNC</span>
-          <span class="skill-tag">3D printing (SLA, FDM, SLS)</span>
-          <span class="skill-tag">Fusion 360</span>
-          <span class="skill-tag">Onshape</span>
-          <span class="skill-tag">SolidWorks</span>
-          <span class="skill-tag">300+ hours CAD</span>
-          <span class="skill-tag">CSWA Certified</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container contact-inner">
-      <p class="section-label light">Say hello</p>
-      <h2 class="section-heading light">Get in touch</h2>
-      <p class="contact-body">
-        Feel free to reach out about internships, projects, or anything else.
-      </p>
-      <a class="btn btn-white" href="mailto:colby@trefethen.us">colby@trefethen.us</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
-      <span>Colby Trefethen</span>
+      <span>Colby Trefethen · iCLIP Research</span>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/colbytrefethen/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:colby@trefethen.us">Email</a>
       </div>
     </div>
   </footer>
@@ -310,16 +99,6 @@
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 60);
     });
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
   </script>
-
 </body>
 </html>

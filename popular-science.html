@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Popular Science — Colby Trefethen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="nav" class="scrolled">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">CT</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="synthesis.html">Synthesis</a></li>
+        <li><a href="popular-science.html" class="active">Popular Science</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-label light">Science Communication</p>
+    <h1 class="page-hero-title">Popular Science Article</h1>
+    <p class="page-hero-sub">3D Printing Without Layers: The iCLIP Revolution</p>
+  </div>
+
+  <section id="popular-science">
+    <div class="container writing-container">
+
+      <!-- PLACEHOLDER: Replace this entire block with your revised popular science article -->
+      <div class="writing-placeholder">
+        <div class="writing-placeholder-icon">📰</div>
+        <p class="writing-placeholder-title">Popular Science Article — Coming Soon</p>
+        <p class="writing-placeholder-body">
+          Your revised popular science article will go here. Written for a general audience,
+          this piece will make iCLIP technology accessible and engaging to readers without a
+          technical background. Paste your revised text in place of this block when ready.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-footer-nav">
+    <a href="synthesis.html" class="page-nav-btn">← Synthesis Essay</a>
+    <a href="about.html" class="page-nav-btn">About the Researcher →</a>
+  </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>Colby Trefethen · iCLIP Research</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/colbytrefethen/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:colby@trefethen.us">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+</body>
+</html>
