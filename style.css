@@ -694,3 +694,21 @@ footer {
 @media (max-width: 700px) {
   .results-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* =============================================
+   HERO STAT HIGHLIGHT
+   ============================================= */
+.hero-stat {
+  color: var(--teal-light);
+  font-style: italic;
+}
+
+/* =============================================
+   RESEARCH CARDS: remove h3 gap when no h3
+   ============================================= */
+.research-card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-top: 0.75rem;
+}
