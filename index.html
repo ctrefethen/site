@@ -22,13 +22,13 @@
     </div>
   </nav>
 
+  <!-- HERO: Hook -->
   <section id="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Research Focus</p>
-      <h1 class="hero-name">iCLIP</h1>
-      <p class="hero-tagline">The Future of Continuous 3D Printing</p>
-      <p class="hero-research-tag">By Colby Trefethen · Mechanical Engineering · CU Boulder</p>
+      <p class="hero-eyebrow">Injection Continuous Liquid Interface Production</p>
+      <h1 class="hero-name">iCLIP prints<br>5–10x <em>faster</em></h1>
+      <p class="hero-tagline">Unlocking unmatched, rapid prototyping with multi-material fabrication</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="synthesis.html">Read the Synthesis</a>
         <a class="btn btn-ghost" href="popular-science.html">Popular Science Article</a>
@@ -37,49 +37,80 @@
     <div class="hero-scroll-hint">↓</div>
   </section>
 
-  <section id="research">
+  <!-- ABOUT THE SITE -->
+  <section id="about-site">
     <div class="container">
       <p class="section-label">About This Site</p>
-      <h2 class="section-heading">What is iCLIP?</h2>
+      <h2 class="section-heading">What You'll Find Here</h2>
       <p class="research-intro">
-        Injection Continuous Liquid Interface Production — iCLIP — is a breakthrough 3D printing process
-        that eliminates the layer-by-layer limitations of traditional additive manufacturing. By combining
-        continuous photopolymerization with injected resin delivery, iCLIP grows objects from liquid in
-        one uninterrupted motion, achieving speeds and surface qualities far beyond conventional methods.
+        This site presents original research on iCLIP — Injection Continuous Liquid Interface Production — a next-generation 3D printing technology developed at Stanford University and UNC Chapel Hill. By injecting resin directly into the "dead-zone," iCLIP overcomes the mass transportation limits that have long held back conventional continuous printing.
       </p>
       <p class="research-intro">
-        This site presents original research exploring how iCLIP works, what the literature says about
-        its capabilities, and why it may represent one of the most significant leaps forward in
-        manufacturing since the invention of 3D printing itself. You will find a full academic synthesis
-        and a popular science article written for a general audience — both designed to make this
-        research accessible to anyone curious about the future of making things.
+        The research explored here is drawn from Lipkowitz et al. (2022), published in <em>Science Advances</em>. You will find a full academic synthesis connecting the key findings of the study, as well as a popular science article written to make this technology accessible to any reader — not just engineers.
+      </p>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM -->
+  <section id="background">
+    <div class="container">
+      <p class="section-label">Background</p>
+      <h2 class="section-heading">The Problem with CLIP</h2>
+      <p class="research-intro">
+        UV vat photopolymerization enables additive manufacturing through 3D printing at 25–100x traditional methods. CLIP, the technology iCLIP is fundamentally built upon, uses oxygen-permeable windows to create a liquid "dead-zone," allowing for cured resin printing at faster-than-traditional speeds.
+      </p>
+      <p class="research-intro">
+        However, CLIP's primary limitation comes from the amount of mass delivered, bottlenecked by Stefan adhesion forces. Higher grade composite resins with more viscosity are impossible to integrate into CLIP without additional injectors — hence iCLIP.
       </p>
 
       <div class="research-cards">
         <div class="research-card">
-          <div class="research-card-num">01</div>
-          <h3>Continuous Growth</h3>
-          <p>Unlike FDM or SLA, iCLIP never stops to cure a layer. Parts are pulled upward from a
-          resin pool continuously, producing smooth geometry and far faster build times.</p>
+          <div class="research-card-num">Research Question</div>
+          <h3>Can viaducts overcome the limit?</h3>
+          <p>Can viaducts be used to actively "inject" into a printing chamber to overcome mass transportation limits and build off of CLIP's foundation?</p>
         </div>
         <div class="research-card">
-          <div class="research-card-num">02</div>
-          <h3>Speed &amp; Resolution</h3>
-          <p>Studies show iCLIP can produce parts orders of magnitude faster than standard SLA while
-          maintaining fine geometric detail and strong mechanical properties.</p>
+          <div class="research-card-num">Hypothesis</div>
+          <h3>Injecting past Stefan forces</h3>
+          <p>Through viaducts at high pressure, it is possible to create an environment which overcomes Stefan adhesion forces, allowing for much greater fabrication speeds, ultra-high viscosity resin printing, and complex multi-material output.</p>
         </div>
         <div class="research-card">
-          <div class="research-card-num">03</div>
-          <h3>Real-World Impact</h3>
-          <p>From biomedical implants to aerospace hardware, iCLIP's precision and throughput are
-          opening doors that layer-based printing simply cannot reach.</p>
+          <div class="research-card-num">The Answer</div>
+          <h3>Yes — by 5–10x</h3>
+          <p>By injecting resin directly into the "dead-zone," iCLIP increased print speed from CLIP technologies by 5–10x, printed resins up to 3,606 cP, and achieved multi-material geometries in all three dimensions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY RESULTS -->
+  <section id="results">
+    <div class="container">
+      <p class="section-label">Key Results</p>
+      <h2 class="section-heading">What the Study Found</h2>
+      <div class="results-grid">
+        <div class="result-item">
+          <div class="result-num">5–10×</div>
+          <div class="result-label">Increased print speed over CLIP technologies</div>
+        </div>
+        <div class="result-item">
+          <div class="result-num">3,606 cP</div>
+          <div class="result-label">Most viscous resin printed — 1 order of magnitude over CLIP</div>
+        </div>
+        <div class="result-item">
+          <div class="result-num">3D</div>
+          <div class="result-label">Multi-material geometries achieved in all three dimensions</div>
+        </div>
+        <div class="result-item">
+          <div class="result-num">MWCNT</div>
+          <div class="result-label">Composites with significant carbon nanotube filling printed beyond standard</div>
         </div>
       </div>
 
-      <div class="page-nav-links">
-        <a href="about.html" class="page-nav-btn">About the Researcher →</a>
-        <a href="synthesis.html" class="page-nav-btn">Read the Synthesis →</a>
+      <div class="page-nav-links" style="margin-top: 3rem;">
+        <a href="synthesis.html" class="page-nav-btn">Read the Full Synthesis →</a>
         <a href="popular-science.html" class="page-nav-btn">Popular Science Article →</a>
+        <a href="about.html" class="page-nav-btn">About the Researcher →</a>
       </div>
     </div>
   </section>
