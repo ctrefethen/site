@@ -592,3 +592,15 @@ footer { background: #111827; padding: 1.5rem 2rem; }
   text-decoration: underline;
   word-break: break-all;
 }
+
+/* =============================================
+   REFERENCES: APA hanging indent (override)
+   ============================================= */
+.writing-references p {
+  font-size: 0.95rem !important;
+  color: #3d4a6b !important;
+  line-height: 1.75 !important;
+  margin-bottom: 1.25rem !important;
+  padding-left: 2.5rem !important;
+  text-indent: -2.5rem !important;
+}
