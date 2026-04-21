@@ -712,3 +712,44 @@ footer {
   line-height: 1.7;
   margin-top: 0.75rem;
 }
+
+/* =============================================
+   HERO: RICHER BACKGROUND (no image fallback)
+   ============================================= */
+#hero {
+  background-image:
+    radial-gradient(ellipse 90% 70% at 55% 40%, rgba(0, 180, 216, 0.13) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 50% at 15% 85%, rgba(0, 80, 140, 0.18) 0%, transparent 55%),
+    linear-gradient(155deg, #070f1f 0%, #111d35 40%, #0c2240 100%);
+  background-color: #070f1f;
+}
+
+#hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -55deg,
+    transparent,
+    transparent 60px,
+    rgba(0, 180, 216, 0.025) 60px,
+    rgba(0, 180, 216, 0.025) 61px
+  );
+  pointer-events: none;
+}
+
+.hero-overlay {
+  background: rgba(7, 15, 31, 0.45);
+}
+
+.hero-name {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  letter-spacing: -0.01em;
+}
+
+.hero-stat {
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  display: block;
+  line-height: 1;
+  margin: 0.1em 0;
+}
